@@ -1,32 +1,23 @@
-# React + TypeScript + Vite
+# Lorenzo Paniccia — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Sito personale pubblicato su GitHub Pages: https://lorenzopaniccia.github.io
 
-Currently, two official plugins are available:
+Sito statico in HTML/CSS/JS puro, nessuna build step richiesta.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Struttura
 
-## React Compiler
+- `index.html` — contenuto della pagina
+- `css/style.css` — stili (chiaro/scuro automatico)
+- `js/script.js` — menu mobile e piccoli comportamenti
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sviluppo locale
 
-## Expanding the Oxlint configuration
+Basta aprire `index.html` nel browser, oppure servirlo con un server statico qualsiasi, ad esempio:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npx serve .
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Deploy
+
+Il sito è pubblicato tramite GitHub Pages, servendo direttamente il branch `main` (nessuna GitHub Action necessaria). Basta fare push su `main` e la pagina si aggiorna in automatico.
