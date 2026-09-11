@@ -10,7 +10,7 @@ Sito statico in HTML/CSS/JS puro, nessuna build step richiesta.
 - `progetti/<slug>/index.html` — una pagina per ogni case study (oggi: `calcio-in-ciociaria`)
 - `css/style.css` — stili condivisi (tema scuro terminal-inspired)
 - `js/script.js` — menu mobile e anno nel footer
-- `assets/` — screenshot dei progetti, immagine per la social preview (`og-image.png`)
+- `assets/` — screenshot dei progetti, immagine per la social preview (`og-image.png`, generata da `og-image.html`: il comando per rigenerarla è nel commento in testa al file)
 - `404.html`, `robots.txt`, `sitemap.xml`
 
 ## Aggiungere un progetto

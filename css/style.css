@@ -77,26 +77,6 @@ img {
   border-radius: var(--radius);
 }
 
-/* Skip link per la navigazione da tastiera */
-
-.skip-link {
-  position: absolute;
-  left: 16px;
-  top: -100px;
-  z-index: 100;
-  padding: 8px 12px;
-  background: var(--accent);
-  color: var(--accent-contrast);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  border-radius: var(--radius);
-}
-
-.skip-link:focus {
-  top: 12px;
-  text-decoration: none;
-}
-
 .visually-hidden {
   position: absolute !important;
   width: 1px;
@@ -322,12 +302,6 @@ img {
   font-weight: 700;
 }
 
-.section-intro {
-  max-width: 62ch;
-  color: var(--text-muted);
-  margin: -8px 0 28px;
-}
-
 .muted {
   color: var(--text-muted);
 }
@@ -546,32 +520,35 @@ img {
   margin-top: 4px;
 }
 
-/* Stack: riferimento rapido, una riga per area (stile output di terminale) */
+/* Stack: griglia di gruppi (uno per area, come le cartelle di "ls stack/"),
+   ogni gruppo elenca le tecnologie come tag. */
 
 .stack {
   display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 10px 24px;
-  margin: 0;
-  padding: 20px 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.stack-group {
+  padding: 18px 20px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
 }
 
-.stack dt {
+.stack-group h3 {
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--accent);
 }
 
-.stack dt::after {
-  content: ":";
+.stack-group h3::after {
+  content: "/";
   color: var(--text-muted);
 }
 
-.stack dd {
-  margin: 0;
+.stack-group .tag-list li {
   color: var(--text);
 }
 

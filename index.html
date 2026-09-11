@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://lorenzopaniccia.github.io/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Lorenzo Paniccia — Full Stack Developer, applicazioni web e sistemi basati su AI">
+  <meta property="og:image:alt" content="Lorenzo Paniccia — Full Stack Developer & AI Integrator, dal backend Java/Spring al frontend React">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lorenzo Paniccia — Full Stack Developer">
   <meta name="twitter:description" content="Full Stack Developer (Java, Spring Boot, React) con particolare interesse per le applicazioni basate su AI.">
@@ -49,8 +49,6 @@
   </script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Vai al contenuto</a>
-
   <header class="site-header">
     <nav class="nav container" aria-label="Navigazione principale">
       <a href="#top" class="logo">Lorenzo Paniccia</a>
@@ -75,13 +73,11 @@
     <section id="top" class="hero container" aria-labelledby="hero-title">
       <p class="eyebrow">whoami</p>
       <h1 id="hero-title">Lorenzo Paniccia<span class="cursor" aria-hidden="true"></span></h1>
-      <p class="tagline">Full Stack Developer — applicazioni web e sistemi basati su AI</p>
+      <p class="tagline">Full Stack Developer &amp; AI Integrator</p>
       <p class="hero-text">
-        Costruisco prodotti web end-to-end, dal backend Java/Spring al frontend React.
-        Quello che mi interessa di più oggi è progettare applicazioni che usano modelli e
-        agenti AI come componenti reali del sistema, non come demo: il mio progetto
-        personale principale, <strong>Calcio in Ciociaria</strong>, è una testata sportiva
-        locale gestita da una redazione di agenti AI.
+        Costruisco prodotti web end-to-end, dal backend Java/Spring al frontend React,
+        con un interesse particolare per applicazioni e sistemi basati su AI: modelli e
+        agenti come componenti reali del prodotto, non come demo.
       </p>
       <div class="cta-group">
         <a href="#projects" class="btn btn-primary">Vedi i progetti</a>
@@ -103,10 +99,6 @@
     <section id="projects" class="container section" aria-labelledby="projects-title">
       <p class="prompt">ls progetti/</p>
       <h2 class="section-title" id="projects-title">Progetti in evidenza</h2>
-      <p class="section-intro">
-        Progetti personali che posso mostrare per intero: codice, architettura, scelte e
-        problemi affrontati.
-      </p>
       <div class="cards">
 
         <article class="card card-featured">
@@ -124,8 +116,9 @@
               da una redazione di agenti AI: un <em>Cronista</em> raccoglie e verifica i
               fatti, un <em>Writer</em> scrive l'articolo, un <em>Revisore</em> e un
               <em>AI Checker</em> lo correggono in loop, un <em>Editor</em> lo prepara per
-              la pubblicazione. Pipeline dedicate per calciomercato e cronache delle
-              partite, pannello di amministrazione, deploy su VPS.
+              la pubblicazione, che resta una decisione umana. Pipeline dedicate per
+              calciomercato e cronache delle partite, pannello di amministrazione, deploy
+              su VPS.
             </p>
             <ul class="tag-list" aria-label="Tecnologie">
               <li>Java 21</li>
@@ -180,8 +173,8 @@
           <p class="entry-org">WS Tech</p>
           <p>
             Sviluppo backend di applicazioni web enterprise in Java con Vaadin: logica di
-            business, API e integrazioni con servizi di terze parti (autenticazione,
-            pagamenti, sistemi esterni) e componenti basati su agenti AI.
+            business, API e integrazioni con servizi di terze parti e componenti basati
+            su agenti AI.
           </p>
           <ul class="tag-list" aria-label="Stack e aree principali">
             <li>Java</li>
@@ -197,25 +190,62 @@
 
     <!-- ================================================================
          STACK
-         Riferimento rapido, una riga per area. Solo tecnologie usate davvero.
+         Un gruppo per area, tecnologie come tag. Solo tecnologie usate davvero.
          ================================================================ -->
     <section id="skills" class="container section" aria-labelledby="skills-title">
-      <p class="prompt">cat stack.txt</p>
+      <p class="prompt">ls stack/</p>
       <h2 class="section-title" id="skills-title">Stack</h2>
-      <dl class="stack">
-        <dt>backend</dt>
-        <dd>Java · Spring Boot · REST API · Gradle</dd>
-        <dt>frontend</dt>
-        <dd>React · TypeScript · JavaScript · Vaadin · HTML/CSS</dd>
-        <dt>data</dt>
-        <dd>PostgreSQL</dd>
-        <dt>ai</dt>
-        <dd>Agenti AI · MCP · LLM APIs</dd>
-        <dt>integrations</dt>
-        <dd>SAML · SPID/CIE · PagoPA · PayPal SDK</dd>
-        <dt>tools</dt>
-        <dd>Git · GitLab</dd>
-      </dl>
+      <div class="stack">
+        <div class="stack-group">
+          <h3>backend</h3>
+          <ul class="tag-list" aria-label="Backend">
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>REST API</li>
+            <li>Gradle</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>frontend</h3>
+          <ul class="tag-list" aria-label="Frontend">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>Vaadin</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>data</h3>
+          <ul class="tag-list" aria-label="Data">
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>ai</h3>
+          <ul class="tag-list" aria-label="AI">
+            <li>Agenti AI</li>
+            <li>MCP</li>
+            <li>LLM APIs</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>integrations</h3>
+          <ul class="tag-list" aria-label="Integrazioni">
+            <li>SAML</li>
+            <li>SPID/CIE</li>
+            <li>PagoPA</li>
+            <li>PayPal SDK</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>tools</h3>
+          <ul class="tag-list" aria-label="Strumenti">
+            <li>Git</li>
+            <li>GitLab</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- ================================================================
@@ -232,9 +262,25 @@
           </div>
           <p class="entry-org">ITS Prodigi</p>
           <p>
-            Percorso ITS (Istituto Tecnico Superiore) orientato allo sviluppo web full stack
-            e all'integrazione di sistemi.
+            Percorso ITS (Istituto Tecnico Superiore) di 2000 ore, di cui 900 di stage,
+            orientato allo sviluppo web full stack e all'integrazione di sistemi: dai
+            fondamenti di programmazione a frontend, backend, database, reti, sicurezza,
+            deployment e testing.
           </p>
+          <ul class="tag-list" aria-label="Moduli principali">
+            <li>Fondamenti di programmazione</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>React</li>
+            <li>Java</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Database</li>
+            <li>Reti e protocolli</li>
+            <li>Sicurezza delle applicazioni</li>
+            <li>Deployment, hosting e cloud</li>
+            <li>Testing e manutenzione</li>
+            <li>IoT, blockchain e AI</li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -249,7 +295,7 @@
         modello AI o un protocollo di autenticazione. Questa stessa curiosità, unita alla
         passione per il calcio della mia zona, mi ha spinto a costruire da zero
         <a href="progetti/calcio-in-ciociaria/">Calcio in Ciociaria</a>, una testata
-        sportiva scritta interamente da agenti AI.
+        sportiva prodotta da una redazione di agenti AI con supervisione umana finale.
       </p>
       <p>
         Nel lavoro di tutti i giorni provo a portare la stessa attenzione ai dettagli,
