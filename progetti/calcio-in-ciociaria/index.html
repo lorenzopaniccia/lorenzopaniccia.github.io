@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcio in Ciociaria — case study · Lorenzo Paniccia</title>
+  <meta name="description" content="Case study di Calcio in Ciociaria: testata sportiva locale scritta da una redazione di agenti AI. Architettura, stack Java/Spring + React, pipeline editoriale, decisioni tecniche e problemi risolti.">
+  <meta name="author" content="Lorenzo Paniccia">
+  <meta name="theme-color" content="#14171a">
+  <link rel="canonical" href="https://lorenzopaniccia.github.io/progetti/calcio-in-ciociaria/">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Lorenzo Paniccia">
+  <meta property="og:title" content="Calcio in Ciociaria — case study">
+  <meta property="og:description" content="Testata sportiva locale scritta da una redazione di agenti AI: architettura, stack, pipeline editoriale, decisioni tecniche e problemi risolti.">
+  <meta property="og:url" content="https://lorenzopaniccia.github.io/progetti/calcio-in-ciociaria/">
+  <meta property="og:image" content="https://lorenzopaniccia.github.io/assets/calcio-desktop.png">
+  <meta property="og:image:width" content="1365">
+  <meta property="og:image:height" content="767">
+  <meta property="og:image:alt" content="Home page di Calcio in Ciociaria su desktop">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcio in Ciociaria — case study">
+  <meta name="twitter:description" content="Testata sportiva locale scritta da una redazione di agenti AI: architettura, stack, pipeline editoriale, decisioni tecniche e problemi risolti.">
+  <meta name="twitter:image" content="https://lorenzopaniccia.github.io/assets/calcio-desktop.png">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Lorenzo Paniccia", "item": "https://lorenzopaniccia.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Progetti", "item": "https://lorenzopaniccia.github.io/#projects" },
+      { "@type": "ListItem", "position": 3, "name": "Calcio in Ciociaria", "item": "https://lorenzopaniccia.github.io/progetti/calcio-in-ciociaria/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigazione principale">
+      <a href="../../" class="logo">Lorenzo Paniccia</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../#projects" aria-current="page">Progetti</a></li>
+        <li><a href="../../#experience">Esperienza</a></li>
+        <li><a href="../../#skills">Stack</a></li>
+        <li><a href="../../#education">Formazione</a></li>
+        <li><a href="../../#about">Chi sono</a></li>
+        <li><a href="../../#contact">Contatti</a></li>
+        <!-- TODO(CV): decommentare quando il PDF è in assets/
+        <li><a href="../../assets/cv-lorenzo-paniccia.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">CV (PDF)</a></li>
+        -->
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="case-header container">
+      <nav class="breadcrumb" aria-label="Percorso">
+        <ol>
+          <li><a href="../../">~</a></li>
+          <li><a href="../../#projects">progetti</a></li>
+          <li aria-current="page">calcio-in-ciociaria</li>
+        </ol>
+      </nav>
+      <p class="prompt">cat case-study.md</p>
+      <h1>Calcio in Ciociaria</h1>
+      <p class="case-summary">
+        Una testata giornalistica online sul calcio della provincia di Frosinone, scritta
+        e mantenuta da una redazione di agenti AI con supervisione umana finale. Progetto
+        personale, sviluppato end-to-end: backend, frontend, pipeline editoriale,
+        infrastruttura.
+      </p>
+
+      <dl class="case-meta">
+        <div>
+          <dt>Ruolo</dt>
+          <dd>Ideazione, progettazione e sviluppo end-to-end</dd>
+        </div>
+        <div>
+          <dt>Periodo</dt>
+          <dd>maggio 2026 — in corso</dd>
+        </div>
+        <div>
+          <dt>Stato</dt>
+          <dd>In sviluppo</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>Java 21 · Spring Boot · React · PostgreSQL · LLM APIs</dd>
+        </div>
+        <div>
+          <dt>Link</dt>
+          <dd>
+            <a href="https://calcioinciociaria.it" target="_blank" rel="noopener noreferrer">calcioinciociaria.it</a>
+          </dd>
+        </div>
+      </dl>
+
+      <nav class="toc" aria-label="Indice del case study">
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problema">Problema</a></li>
+          <li><a href="#obiettivo">Obiettivo</a></li>
+          <li><a href="#ruolo">Il mio ruolo</a></li>
+          <li><a href="#architettura">Architettura</a></li>
+          <li><a href="#stack">Stack tecnologico</a></li>
+          <li><a href="#pipeline">La pipeline AI</a></li>
+          <li><a href="#decisioni">Decisioni tecniche</a></li>
+          <li><a href="#problemi">Problemi e soluzioni</a></li>
+          <li><a href="#screenshot">Screenshot</a></li>
+          <li hidden><a href="#risultati">Risultati e metriche</a></li> <!-- in standby: togliere hidden qui e sulla sezione quando ci sono i dati -->
+          <li><a href="#link">Link</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <section id="overview" class="case-section container" aria-labelledby="overview-title">
+      <h2 id="overview-title">Overview</h2>
+      <p>
+        <strong>Calcio in Ciociaria</strong> è una testata sportiva locale che segue le
+        principali società calcistiche della provincia di Frosinone: Frosinone Calcio,
+        Sora, Cassino, Isola Liri, Ferentino, Ceccano e Anagni. Pubblica notizie,
+        cronache delle partite con formazioni e classifica, schede delle squadre e dei
+        giocatori.
+      </p>
+      <p>
+        La particolarità è che non ha una redazione umana: gli articoli sono prodotti da
+        una pipeline di agenti AI con ruoli distinti (Cronista, Writer, Revisore, AI
+        Checker, Editor, Approver) che raccolgono le fonti, scrivono, correggono e
+        preparano ogni pezzo per la pubblicazione. Un pannello di amministrazione permette
+        di seguire in tempo reale il lavoro degli agenti, approvare o rifiutare le bozze e
+        intervenire manualmente. Ogni articolo dichiara al lettore di essere stato
+        generato con l'aiuto dell'AI e una pagina dedicata spiega come funziona il sistema.
+      </p>
+    </section>
+
+    <section id="problema" class="case-section container" aria-labelledby="problema-title">
+      <h2 id="problema-title">Problema</h2>
+      <p>
+        Seguire con continuità il calcio della provincia di Frosinone richiede di
+        consultare fonti sparse — testate locali, siti ufficiali, social, portali di
+        risultati — e nessuna testata le copre in modo sistematico. Fatto a mano, è un
+        lavoro editoriale quotidiano che una singola persona non può sostenere.
+      </p>
+      <p>
+        Allo stesso tempo, "far scrivere gli articoli a un LLM" non basta: senza regole
+        e controlli si ottengono pezzi generici, che riassumono le fonti invece di
+        raccontare un fatto, che citano testate terze o inventano dettagli.
+      </p>
+    </section>
+
+    <section id="obiettivo" class="case-section container" aria-labelledby="obiettivo-title">
+      <h2 id="obiettivo-title">Obiettivo</h2>
+      <p>
+        Costruire un flusso editoriale che giri da solo — dalla raccolta delle fonti alla
+        bozza pronta per la pubblicazione — con tre vincoli:
+      </p>
+      <ul>
+        <li><strong>qualità giornalistica</strong>: un solo angolo per articolo, aggancio locale, mai copiare né citare per nome le fonti, tono umano;</li>
+        <li><strong>affidabilità dei fatti</strong>: ogni affermazione deve essere verificabile sui dati raccolti, e quando un dato manca il sistema non deve inventarlo;</li>
+        <li><strong>costi sotto controllo</strong>: i modelli si pagano a chiamata, quindi la parte AI deve partire solo quando c'è davvero qualcosa di cui scrivere.</li>
+      </ul>
+      <p>
+        La supervisione umana finale resta per scelta: il sistema prepara, una persona
+        approva.
+      </p>
+    </section>
+
+    <section id="ruolo" class="case-section container" aria-labelledby="ruolo-title">
+      <h2 id="ruolo-title">Il mio ruolo</h2>
+      <p>
+        Progetto personale, ideato e sviluppato in autonomia: dominio e infrastruttura,
+        backend Java/Spring, frontend React del sito pubblico e del pannello admin,
+        progettazione della redazione AI e dei prompt, pipeline di raccolta fonti,
+        deploy e manutenzione in produzione.
+      </p>
+      <p>
+        È anche il mio banco di prova per un flusso di sviluppo assistito da AI: buona
+        parte del codice è scritta insieme a strumenti di AI coding (Claude Code), con
+        me a definire requisiti, architettura e regole editoriali, e a rivedere quello che
+        viene prodotto.
+      </p>
+    </section>
+
+    <section id="architettura" class="case-section container" aria-labelledby="architettura-title">
+      <h2 id="architettura-title">Architettura generale</h2>
+      <pre class="diagram" aria-label="Schema dell'architettura">
+ lettori ──▶ ┌──────────────────────────────────┐
+             │ Frontend React (Vite)            │  Cloudflare Pages
+             │ sito pubblico + pannello /admin  │
+             └────────────────┬─────────────────┘
+                              │ HTTPS  api.calcioinciociaria.it
+             ┌────────────────▼─────────────────┐
+             │ Nginx ──▶ Spring Boot (Java 21)  │  VPS Ubuntu, systemd
+             │ REST API · scheduler             │
+             │ redazione AI · pipeline fonti    │
+             └───┬──────────────┬───────────┬───┘
+                 │              │           │
+      ┌──────────▼───┐  ┌───────▼──────┐  ┌─▼──────────────────────┐
+      │ PostgreSQL   │  │ Fetcher      │  │ API esterne            │
+      │ (Supabase)   │  │ Python +     │  │ LLM APIs               │
+      │              │  │ curl_cffi    │  │ Google News RSS · feed │
+      └──────────────┘  │ solo locale  │  │ YouTube · Pexels       │
+                        └──────────────┘  │ Transfermarkt · Wiki   │
+                                          └────────────────────────┘</pre>
+      <p>
+        Il progetto è un monorepo con tre componenti che girano separati:
+      </p>
+      <ul>
+        <li>
+          <strong>Backend</strong> — un'applicazione Spring Boot che espone le API
+          pubbliche (articoli, squadre, partite) e quelle protette del pannello admin,
+          ospita gli agenti della redazione AI, le pipeline di raccolta fonti e gli
+          scheduler. Gira su un VPS Ubuntu come servizio systemd, dietro un reverse proxy
+          Nginx con certificato Let's Encrypt.
+        </li>
+        <li>
+          <strong>Frontend</strong> — una SPA React (Vite) che serve sia il sito pubblico
+          sia il pannello di amministrazione; è pubblicata su Cloudflare Pages con deploy
+          automatico a ogni push.
+        </li>
+        <li>
+          <strong>Fetcher</strong> — un piccolo servizio Python, raggiungibile solo in
+          localhost, che scarica le pagine dei portali sportivi che bloccano i client
+          HTTP Java (vedi <a href="#problemi">Problemi e soluzioni</a>).
+        </li>
+      </ul>
+      <p>
+        I dati vivono su PostgreSQL (Supabase). Il deploy del backend è automatizzato con
+        GitHub Actions, che a ogni push si collega via SSH al server, ricompila il JAR e
+        riavvia il servizio. Il pannello admin riceve i log degli agenti in tempo reale
+        tramite Server-Sent Events.
+      </p>
+    </section>
+
+    <section id="stack" class="case-section container" aria-labelledby="stack-title">
+      <h2 id="stack-title">Stack tecnologico</h2>
+      <h3>Backend</h3>
+      <ul class="tag-list">
+        <li>Java 21</li>
+        <li>Spring Boot 3</li>
+        <li>Spring Data JPA / Hibernate</li>
+        <li>Spring Security</li>
+        <li>Gradle</li>
+        <li>OkHttp</li>
+        <li>Jsoup</li>
+        <li>ROME (RSS)</li>
+        <li>Server-Sent Events</li>
+      </ul>
+      <h3>Frontend</h3>
+      <ul class="tag-list">
+        <li>React 18</li>
+        <li>Vite</li>
+        <li>React Router</li>
+        <li>CSS Modules</li>
+        <li>TipTap (editor)</li>
+        <li>Leaflet (mappe)</li>
+      </ul>
+      <h3>Dati e AI</h3>
+      <ul class="tag-list">
+        <li>PostgreSQL (Supabase)</li>
+        <li>LLM APIs (Gemini, OpenRouter)</li>
+        <li>Google News RSS</li>
+        <li>YouTube Data API</li>
+        <li>Pexels / Wikimedia Commons</li>
+        <li>Transfermarkt / Wikipedia</li>
+      </ul>
+      <h3>Infrastruttura</h3>
+      <ul class="tag-list">
+        <li>VPS Ubuntu 24.04</li>
+        <li>Nginx</li>
+        <li>systemd</li>
+        <li>Let's Encrypt</li>
+        <li>Cloudflare Pages + DNS</li>
+        <li>GitHub Actions</li>
+        <li>Python 3 + curl_cffi</li>
+      </ul>
+    </section>
+
+    <section id="pipeline" class="case-section container" aria-labelledby="pipeline-title">
+      <h2 id="pipeline-title">Funzionamento della pipeline AI</h2>
+      <p>
+        La redazione è modellata sui ruoli di una redazione vera. Ogni ruolo è un
+        servizio Java con il proprio prompt e il proprio modello, e un orchestratore li
+        incatena in-process; le transizioni di stato di un articolo passano tutte da un
+        unico servizio che rende impossibili i passaggi illeciti e mantiene lo storico
+        delle revisioni.
+      </p>
+      <pre class="diagram" aria-label="Schema della pipeline editoriale">
+[ogni ora — nessuna chiamata LLM]
+  Google News RSS · feed testate locali · Google Alerts · YouTube · radar Trends
+        │  dedup per URL · assegnazione del topic (TopicMatcher)
+        ▼
+  raw_sources ──▶ almeno 3 fonti nuove su un topic? ──no──▶ stop, costo zero
+        │ sì
+        ▼
+  Cronista ──▶ dossier + factSheet     (ricerca web per verificare e completare)
+        ▼
+  Writer ──▶ bozza articolo            (regole editoriali nel system prompt)
+        ▼
+  Revisore ◀────────────────┐          (corregge sul factSheet, non inventa)
+        ▼                   │
+  AI Checker ─── REVISE ────┘          (modello diverso, legge solo il testo)
+        │ PASS          └── dopo 3 giri: escalation al Cronista
+        ▼
+  Editor ──▶ titolo, meta description, tag, immagine dal pool
+        ▼
+  Approver ──▶ pronto per l'approvazione ──▶ ok dell'admin ──▶ pubblicato</pre>
+
+      <h3>1. Raccolta fonti (deterministica, ogni ora)</h3>
+      <p>
+        Un job orario interroga Google News RSS per ogni topic seguito, i feed RSS delle
+        testate locali e del sito ufficiale del Frosinone, gli alert Google in formato
+        RSS, i canali YouTube locali via YouTube Data API e un "radar" Google Trends
+        filtrato per parole chiave. Le fonti vengono deduplicate per URL e assegnate a un
+        topic da un matcher che usa gli stessi alias delle query di ricerca. Tutto questo
+        non costa nulla: nessun modello viene chiamato.
+      </p>
+
+      <h3>2. Dispatch</h3>
+      <p>
+        Solo se un topic ha accumulato almeno tre fonti nuove dall'ultimo giro parte la
+        parte costosa della pipeline. È il modo con cui il sistema evita di scrivere
+        articoli "perché è ora" invece che "perché è successo qualcosa".
+      </p>
+
+      <h3>3. Cronista</h3>
+      <p>
+        Decide cosa merita un articolo. Parte dai titoli raccolti — che da soli non
+        bastano quasi mai — e usa un modello con ricerca web integrata per verificare e
+        completare cifre, date, dichiarazioni. Il risultato è un <em>dossier</em> con
+        un <em>factSheet</em>: l'elenco chiuso dei fatti su cui gli altri ruoli potranno
+        basarsi.
+      </p>
+
+      <h3>4. Writer</h3>
+      <p>
+        Scrive l'articolo dal dossier seguendo regole editoriali fisse nel system prompt:
+        mai citare le fonti per nome, un solo angolo narrativo, lunghezza contenuta,
+        aggancio locale obbligatorio, prendere una posizione, tono umano. Restituisce
+        JSON strutturato (titolo, sommario, corpo, meta description, tag).
+      </p>
+
+      <h3>5. Revisore e AI Checker</h3>
+      <p>
+        Il Revisore confronta il testo con il factSheet e corregge direttamente; se
+        un'affermazione sembra sbagliata ma il dato corretto non c'è, non inventa un
+        valore plausibile: lascia la frase e segnala il problema. L'AI Checker usa un
+        modello di famiglia diversa e legge <em>solo</em> titolo e corpo, senza dossier
+        né storico: deve giudicare come un lettore qualsiasi se il pezzo "sembra scritto
+        da un giornalista vero". I due lavorano in loop; dopo tre giri senza esito il
+        dossier torna al Cronista, e un tetto assoluto di revisioni impedisce comunque
+        rimbalzi infiniti.
+      </p>
+
+      <h3>6. Editor e Approver</h3>
+      <p>
+        L'Editor fa il lavoro meccanico: titolo definitivo, meta description, tag e scelta
+        dell'immagine da un pool raccolto da Pexels e Wikimedia Commons. L'Approver fa
+        un'ultima lettura d'insieme. In modalità <em>approvazione</em> (default)
+        l'articolo resta bozza finché non lo approvo dal pannello; esiste una modalità
+        automatica che pubblica direttamente.
+      </p>
+
+      <h3>Pipeline dedicate</h3>
+      <ul>
+        <li>
+          <strong>Calciomercato</strong> — polling paginato di siti specializzati con
+          Jsoup, filtro sul titolo per squadre e giocatori seguiti, estrazione strutturata
+          della trattativa con un LLM (output JSON: giocatore, club, tipo di trasferimento,
+          cifre), arricchimento con Transfermarkt e Wikipedia, scrittura dell'articolo.
+        </li>
+        <li>
+          <strong>Cronache delle partite</strong> — sincronizzazione dei dati delle sette
+          società ogni sei ore (risultati, eventi, formazioni), snapshot della classifica
+          al momento del match e cronaca scritta da un generatore NLG a regole, senza
+          nessuna chiamata a un modello a runtime (vedi la decisione
+          <a href="#decisioni">Compiled AI</a> qui sotto).
+        </li>
+      </ul>
+    </section>
+
+    <section id="decisioni" class="case-section container" aria-labelledby="decisioni-title">
+      <h2 id="decisioni-title">Principali decisioni tecniche</h2>
+      <ul class="decision-list">
+        <li>
+          <strong>LLM solo su segnale deterministico</strong>
+          <p>
+            Dopo un picco di consumo inatteso, ho separato nettamente la raccolta (gratis,
+            ogni ora) dalla generazione (a pagamento, solo quando un topic supera una
+            soglia di fonti nuove). Il costo segue le notizie, non l'orologio.
+          </p>
+        </li>
+        <li>
+          <strong>Ruoli separati, modelli diversi</strong>
+          <p>
+            Ogni ruolo della redazione ha il proprio modello, scelto per il compito: il
+            Cronista usa un modello con ricerca web integrata, il Writer un modello diverso
+            da quello del Revisore, l'AI Checker un modello di un'altra famiglia ancora, per
+            ridurre il bias di autovalutazione. Quali modelli usare per quali ruoli è una
+            scelta ancora aperta, e per questo è isolata dietro un'unica interfaccia
+            <code>LlmClient</code>: cambiare provider o modello a un ruolo non tocca la
+            logica della redazione.
+          </p>
+        </li>
+        <li>
+          <strong>Compiled AI dove i dati sono già strutturati</strong>
+          <p>
+            Le cronache delle partite non passano per un LLM. Seguendo il principio della
+            <em>Compiled AI</em> descritto da Trooskens et al. in
+            <a href="https://arxiv.org/abs/2604.05150" target="_blank" rel="noopener noreferrer"><cite>Compiled AI: Deterministic Code Generation for LLM-Based Workflow Automation</cite></a>
+            (2026), il modello lavora una volta sola, in fase di "compilazione", per
+            produrre la logica di generazione; a runtime gira solo un generatore NLG a
+            regole, deterministico, che trasforma risultato, marcatori, cartellini, cambi e
+            classifica in testo. Zero chiamate a modelli, nessuna latenza, nessuna quota e
+            lo stesso match produce sempre la stessa cronaca: ogni parola discende da un
+            campo popolato, quindi il testo non può dire più di quanto i dati sappiano.
+            Lo stesso schema — modello a compile-time, validatori deterministici, artefatti
+            eseguiti senza modelli — è quello previsto per la ricerca delle fonti di ogni
+            società.
+          </p>
+        </li>
+        <li>
+          <strong>Il Revisore non inventa: escalation</strong>
+          <p>
+            Quando un dato manca, la scelta giusta è tornare a chi fa ricerca, non
+            "aggiustare" il testo con un valore plausibile. Le transizioni di stato sono
+            centralizzate e hanno un tetto massimo di revisioni.
+          </p>
+        </li>
+        <li>
+          <strong>Human-in-the-loop per scelta</strong>
+          <p>
+            La pipeline porta l'articolo fino a "pronto per l'approvazione"; la
+            pubblicazione la decide una persona. È la stessa impostazione delle redazioni
+            che usano l'AI in produzione, e la modalità automatica esiste ma è opt-in.
+          </p>
+        </li>
+        <li>
+          <strong>Fatti, non testo: rispetto delle fonti</strong>
+          <p>
+            Dai feed RSS si legge solo la descrizione, mai il contenuto integrale, così
+            il Writer riceve fatti da cui scrivere e non testo da riformulare. Le fonti
+            che dichiarano un opt-out per usi AI nel proprio <code>robots.txt</code>
+            sono escluse.
+          </p>
+        </li>
+        <li>
+          <strong>Un motore generico per le fonti</strong>
+          <p>
+            Invece di un servizio per ogni testata, un solo motore RSS configurabile dal
+            pannello admin (URL, topic di default, filtro keyword). Aggiungere una fonte
+            è una riga in tabella, non codice nuovo.
+          </p>
+        </li>
+        <li>
+          <strong>Trasparenza verso il lettore</strong>
+          <p>
+            Ogni articolo chiude con una nota che dichiara l'uso dell'AI e le fonti, e
+            una pagina "Come funziona" spiega la pipeline.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="problemi" class="case-section container" aria-labelledby="problemi-title">
+      <h2 id="problemi-title">Problemi affrontati e soluzioni</h2>
+      <ul class="decision-list">
+        <li>
+          <strong>I portali sportivi rispondono 403 ai client Java</strong>
+          <p>
+            <span class="label-problem">Problema</span>
+            Sofascore e altri portali non guardano lo user-agent ma l'impronta TLS/HTTP2
+            del client: OkHttp, Jsoup e l'HttpClient del JDK vengono riconosciuti dal
+            ClientHello e bloccati prima ancora di leggere un header.
+          </p>
+          <p>
+            <span class="label-solution">Soluzione</span>
+            Un micro-servizio Python separato basato su <code>curl_cffi</code>, che replica
+            il ClientHello di Chrome. Ascolta solo su localhost, gira come servizio systemd
+            senza privilegi e, per scelta, non esegue JavaScript né risolve CAPTCHA: se un
+            sito richiede quello, la risposta giusta è non usarlo.
+          </p>
+        </li>
+        <li>
+          <strong>I titoli RSS non bastano per scrivere</strong>
+          <p>
+            <span class="label-problem">Problema</span>
+            Verificato sui dati reali: il campo "content" di Google News RSS è quasi sempre
+            un wrapper HTML del link, non un estratto leggibile. Un Cronista che lavora solo
+            sui titoli produce factSheet troppo poveri.
+          </p>
+          <p>
+            <span class="label-solution">Soluzione</span>
+            Il Cronista usa i titoli come piste e un modello con grounding web per cercare,
+            verificare e completare i fatti prima di scrivere il factSheet.
+          </p>
+        </li>
+        <li>
+          <strong>Loop di revisione potenzialmente infinito</strong>
+          <p>
+            <span class="label-problem">Problema</span>
+            Revisore e AI Checker possono rimandarsi un articolo a vicenda senza mai
+            convergere.
+          </p>
+          <p>
+            <span class="label-solution">Soluzione</span>
+            Soglia di escalation al Cronista dopo tre giri, tetto assoluto di revisioni
+            imposto nel servizio che governa le transizioni di stato (indipendente
+            dall'orchestratore) e un ulteriore backstop locale nel loop.
+          </p>
+        </li>
+        <li>
+          <strong>Seed dei topic bloccato da un database preesistente</strong>
+          <p>
+            <span class="label-problem">Problema</span>
+            Il seeding iniziale dei topic era protetto da una guardia "se la tabella non è
+            vuota, esci". In produzione la tabella conteneva già tre righe di un'origine
+            precedente: nove topic non sono mai stati creati, e le fonti relative venivano
+            scartate in silenzio dal matcher.
+          </p>
+          <p>
+            <span class="label-solution">Soluzione</span>
+            Topic ricreati con gli stessi dati del seed e lezione imparata: le guardie di
+            idempotenza vanno fatte per singolo record, non per tabella.
+          </p>
+        </li>
+        <li>
+          <strong>Le API dei social non sono accessibili a uno sviluppatore singolo</strong>
+          <p>
+            <span class="label-problem">Problema</span>
+            Meta richiede una verifica aziendale, X è a pagamento, Reddit ha approvazioni
+            lunghe e poco contenuto locale, Telegram richiede di essere amministratori dei
+            canali altrui.
+          </p>
+          <p>
+            <span class="label-solution">Soluzione</span>
+            Solo YouTube Data API, usando la playlist "uploads" del canale invece della
+            ricerca (1 unità di quota per pagina invece di 100) e mettendo in cache la
+            risoluzione handle → channel id.
+          </p>
+        </li>
+        <li>
+          <strong>Disponibilità e quota dei modelli</strong>
+          <p>
+            <span class="label-problem">Problema</span>
+            Un singolo modello può essere temporaneamente non disponibile o esaurire la
+            quota, e la pipeline non deve fermarsi per questo.
+          </p>
+          <p>
+            <span class="label-solution">Soluzione</span>
+            Il client LLM prova una catena di modelli in ordine di preferenza; la
+            catena è condivisa da tutti i servizi che lo usano.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="screenshot" class="case-section container" aria-labelledby="screenshot-title">
+      <h2 id="screenshot-title">Screenshot</h2>
+      <div class="screenshots">
+        <figure class="shot-wide">
+          <img src="../../assets/calcio-desktop.png" alt="Home page di Calcio in Ciociaria su desktop: testata, menu Home/Notizie/Squadre/Giocatori, striscia dei risultati recenti e articolo di apertura Frosinone-Venezia 3-2" width="1365" height="767" loading="lazy">
+          <figcaption>Sito pubblico — home page, desktop</figcaption>
+        </figure>
+        <figure class="shot-mobile">
+          <img src="../../assets/calcio-mobile.png" alt="Home page di Calcio in Ciociaria su mobile" width="480" height="621" loading="lazy">
+          <figcaption>Sito pubblico — home page, mobile</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/calcio-partita.png" alt="Pagina partita Frosinone-Venezia 3-2: tabellino con marcatori e minuti, stadio e arbitro, inizio della cronaca a eventi" width="1350" height="768" loading="lazy">
+          <figcaption>Pagina partita: tabellino, eventi e cronaca generata dai dati</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/calcio-admin-dashboard.png" alt="Dashboard del pannello admin: contatori articoli pubblicati, in attesa e rifiutati, stato della redazione AI, interruttore della modalità di pubblicazione e pulsanti per lanciare manualmente Ricercatore, Writer e polling mercato" width="1350" height="768" loading="lazy">
+          <figcaption>Pannello admin: dashboard, modalità di pubblicazione ed esecuzione manuale degli agenti</figcaption>
+        </figure>
+        <figure class="shot-wide">
+          <img src="../../assets/calcio-admin-redazione.png" alt="Board della redazione AI nel pannello admin: colonne Dossier, Scritto, In revisione, Fact-checked, AI-checked ed Editato con gli articoli in lavorazione e il numero di revisioni" width="1350" height="540" loading="lazy">
+          <figcaption>Pannello admin: board della redazione AI, un articolo per colonna di stato editoriale</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Metriche: in standby finché il progetto non è a regime.
+         Quando ci sono i dati, compilare e togliere hidden qui e sul link nell'indice. -->
+    <section id="risultati" class="case-section container" aria-labelledby="risultati-title" hidden>
+      <h2 id="risultati-title">Risultati e metriche</h2>
+      <ul class="metrics">
+        <li><span class="metric-value">[n]</span><span class="metric-label">articoli pubblicati</span></li>
+        <li><span class="metric-value">[n]</span><span class="metric-label">fonti monitorate</span></li>
+        <li><span class="metric-value">7</span><span class="metric-label">società seguite</span></li>
+        <li><span class="metric-value">[n]</span><span class="metric-label">[altra metrica]</span></li>
+      </ul>
+      <p>[Breve commento sui risultati.]</p>
+    </section>
+
+    <section id="link" class="case-section container" aria-labelledby="link-title">
+      <h2 id="link-title">Link</h2>
+      <p>
+        Il sito è in sviluppo e al momento è raggiungibile solo in anteprima riservata; il
+        codice non è pubblico.
+      </p>
+      <div class="case-links">
+        <a href="https://calcioinciociaria.it" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Apri calcioinciociaria.it</a>
+      </div>
+      <p class="case-back"><a href="../../#projects" class="back-link">torna ai progetti</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="container">&copy; <span id="year"></span> Lorenzo Paniccia</p>
+  </footer>
+
+  <script src="../../js/script.js"></script>
+</body>
+</html>

@@ -3,239 +3,280 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lorenzo Paniccia — Full Stack Developer & AI</title>
-  <meta name="description" content="Portfolio di Lorenzo Paniccia, Full Stack Developer specializzato in soluzioni AI.">
+  <title>Lorenzo Paniccia — Full Stack Developer</title>
+  <meta name="description" content="Portfolio di Lorenzo Paniccia, Full Stack Developer (Java, Spring Boot, React) con particolare interesse per le applicazioni basate su AI. Progetti personali e case study.">
+  <meta name="author" content="Lorenzo Paniccia">
+  <meta name="theme-color" content="#14171a">
+  <link rel="canonical" href="https://lorenzopaniccia.github.io/">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Lorenzo Paniccia">
+  <meta property="og:title" content="Lorenzo Paniccia — Full Stack Developer">
+  <meta property="og:description" content="Full Stack Developer (Java, Spring Boot, React) con particolare interesse per le applicazioni basate su AI. Progetti personali e case study.">
+  <meta property="og:url" content="https://lorenzopaniccia.github.io/">
+  <meta property="og:image" content="https://lorenzopaniccia.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lorenzo Paniccia — Full Stack Developer, applicazioni web e sistemi basati su AI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lorenzo Paniccia — Full Stack Developer">
+  <meta name="twitter:description" content="Full Stack Developer (Java, Spring Boot, React) con particolare interesse per le applicazioni basate su AI.">
+  <meta name="twitter:image" content="https://lorenzopaniccia.github.io/assets/og-image.png">
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lorenzo Paniccia",
+    "url": "https://lorenzopaniccia.github.io/",
+    "jobTitle": "Full Stack Developer",
+    "worksFor": { "@type": "Organization", "name": "WS Tech" },
+    "alumniOf": { "@type": "EducationalOrganization", "name": "ITS Prodigi" },
+    "email": "mailto:lorenzopaniccia9@gmail.com",
+    "knowsAbout": ["Java", "Spring Boot", "React", "TypeScript", "PostgreSQL", "AI agents", "Model Context Protocol"],
+    "sameAs": [
+      "https://github.com/lorenzopaniccia"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+
   <header class="site-header">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Navigazione principale">
       <a href="#top" class="logo">Lorenzo Paniccia</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">Chi sono</a></li>
         <li><a href="#projects">Progetti</a></li>
         <li><a href="#experience">Esperienza</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#education">Formazione</a></li>
+        <li><a href="#about">Chi sono</a></li>
         <li><a href="#contact">Contatti</a></li>
+        <!-- TODO(CV): decommentare quando il PDF è in assets/ (o sostituire l'href con l'URL del CV)
+        <li><a href="assets/cv-lorenzo-paniccia.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">CV (PDF)</a></li>
+        -->
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="top" class="hero container">
+  <main id="main">
+    <section id="top" class="hero container" aria-labelledby="hero-title">
       <p class="eyebrow">whoami</p>
-      <h1>Lorenzo Paniccia<span class="cursor"></span></h1>
-      <p class="tagline">Full Stack Developer specializzato in soluzioni AI</p>
+      <h1 id="hero-title">Lorenzo Paniccia<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="tagline">Full Stack Developer — applicazioni web e sistemi basati su AI</p>
       <p class="hero-text">
-        Costruisco applicazioni web e sistemi di agenti AI che si integrano con gli
-        strumenti reali con cui lavoro ogni giorno.
+        Costruisco prodotti web end-to-end, dal backend Java/Spring al frontend React.
+        Quello che mi interessa di più oggi è progettare applicazioni che usano modelli e
+        agenti AI come componenti reali del sistema, non come demo: il mio progetto
+        personale principale, <strong>Calcio in Ciociaria</strong>, è una testata sportiva
+        locale gestita da una redazione di agenti AI.
       </p>
       <div class="cta-group">
         <a href="#projects" class="btn btn-primary">Vedi i progetti</a>
         <a href="#contact" class="btn btn-secondary">Contattami</a>
+        <!-- TODO(CV): decommentare quando il PDF è in assets/ (o sostituire l'href con l'URL del CV)
+        <a href="assets/cv-lorenzo-paniccia.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Scarica il CV</a>
+        -->
       </div>
     </section>
 
-    <section id="about" class="container section">
+    <!-- ================================================================
+         PROGETTI
+         Solo progetti personali / pubblicabili. Per aggiungerne uno:
+         copia il blocco <article class="card"> qui sotto (senza la classe
+         card-featured), aggiorna testo, tag e link. Se ha un case study,
+         crea progetti/<slug>/index.html partendo da
+         progetti/calcio-in-ciociaria/index.html.
+         ================================================================ -->
+    <section id="projects" class="container section" aria-labelledby="projects-title">
+      <p class="prompt">ls progetti/</p>
+      <h2 class="section-title" id="projects-title">Progetti in evidenza</h2>
+      <p class="section-intro">
+        Progetti personali che posso mostrare per intero: codice, architettura, scelte e
+        problemi affrontati.
+      </p>
+      <div class="cards">
+
+        <article class="card card-featured">
+          <div class="card-media">
+            <a href="progetti/calcio-in-ciociaria/" aria-label="Apri il case study di Calcio in Ciociaria">
+              <img src="assets/calcio-desktop.png" alt="Home page di Calcio in Ciociaria su desktop: testata, striscia risultati recenti e articolo di apertura Frosinone-Venezia 3-2" class="media-desktop" width="1365" height="767" loading="lazy">
+            </a>
+            <img src="assets/calcio-mobile.png" alt="" class="media-mobile" width="480" height="621" loading="lazy" aria-hidden="true">
+          </div>
+          <div class="card-body">
+            <h3>Calcio in Ciociaria</h3>
+            <p class="card-context">Progetto personale, in sviluppo — <a href="https://calcioinciociaria.it" target="_blank" rel="noopener noreferrer">calcioinciociaria.it</a></p>
+            <p>
+              Testata giornalistica locale sul calcio della provincia di Frosinone, scritta
+              da una redazione di agenti AI: un <em>Cronista</em> raccoglie e verifica i
+              fatti, un <em>Writer</em> scrive l'articolo, un <em>Revisore</em> e un
+              <em>AI Checker</em> lo correggono in loop, un <em>Editor</em> lo prepara per
+              la pubblicazione. Pipeline dedicate per calciomercato e cronache delle
+              partite, pannello di amministrazione, deploy su VPS.
+            </p>
+            <ul class="tag-list" aria-label="Tecnologie">
+              <li>Java 21</li>
+              <li>Spring Boot</li>
+              <li>React</li>
+              <li>PostgreSQL</li>
+              <li>LLM APIs</li>
+              <li>Agenti AI</li>
+            </ul>
+            <div class="card-actions">
+              <a href="progetti/calcio-in-ciociaria/" class="btn-details">cat case-study.md</a>
+              <a href="https://calcioinciociaria.it" class="btn-details" target="_blank" rel="noopener noreferrer">open calcioinciociaria.it</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Template per un nuovo progetto (senza screenshot):
+        <article class="card">
+          <div class="card-body">
+            <h3>Nome progetto</h3>
+            <p class="card-context">Progetto personale — <a href="https://github.com/lorenzopaniccia/repo" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+            <p>Una o due frasi: cosa fa e perché l'ho costruito.</p>
+            <ul class="tag-list" aria-label="Tecnologie">
+              <li>Tech 1</li>
+              <li>Tech 2</li>
+            </ul>
+            <div class="card-actions">
+              <a href="progetti/slug/" class="btn-details">cat case-study.md</a>
+              <a href="https://github.com/lorenzopaniccia/repo" class="btn-details" target="_blank" rel="noopener noreferrer">git clone</a>
+            </div>
+          </div>
+        </article>
+        -->
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ESPERIENZA
+         Volutamente ad alto livello: niente clienti, architetture interne o
+         dettagli proprietari. I campi tra [parentesi] sono da confermare.
+         ================================================================ -->
+    <section id="experience" class="container section" aria-labelledby="experience-title">
+      <p class="prompt">cat esperienza.md</p>
+      <h2 class="section-title" id="experience-title">Esperienza professionale</h2>
+      <ul class="entry-list">
+        <li class="entry">
+          <div class="entry-head">
+            <h3>Backend Developer</h3>
+            <span class="entry-period">nov 2025 — oggi</span>
+          </div>
+          <p class="entry-org">WS Tech</p>
+          <p>
+            Sviluppo backend di applicazioni web enterprise in Java con Vaadin: logica di
+            business, API e integrazioni con servizi di terze parti (autenticazione,
+            pagamenti, sistemi esterni) e componenti basati su agenti AI.
+          </p>
+          <ul class="tag-list" aria-label="Stack e aree principali">
+            <li>Java</li>
+            <li>Vaadin</li>
+            <li>Gradle</li>
+            <li>REST API</li>
+            <li>Integrazioni enterprise</li>
+            <li>Agenti AI / MCP</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================================================================
+         STACK
+         Riferimento rapido, una riga per area. Solo tecnologie usate davvero.
+         ================================================================ -->
+    <section id="skills" class="container section" aria-labelledby="skills-title">
+      <p class="prompt">cat stack.txt</p>
+      <h2 class="section-title" id="skills-title">Stack</h2>
+      <dl class="stack">
+        <dt>backend</dt>
+        <dd>Java · Spring Boot · REST API · Gradle</dd>
+        <dt>frontend</dt>
+        <dd>React · TypeScript · JavaScript · Vaadin · HTML/CSS</dd>
+        <dt>data</dt>
+        <dd>PostgreSQL</dd>
+        <dt>ai</dt>
+        <dd>Agenti AI · MCP · LLM APIs</dd>
+        <dt>integrations</dt>
+        <dd>SAML · SPID/CIE · PagoPA · PayPal SDK</dd>
+        <dt>tools</dt>
+        <dd>Git · GitLab</dd>
+      </dl>
+    </section>
+
+    <!-- ================================================================
+         FORMAZIONE — i campi tra [parentesi] sono da confermare.
+         ================================================================ -->
+    <section id="education" class="container section" aria-labelledby="education-title">
+      <p class="prompt">cat formazione.md</p>
+      <h2 class="section-title" id="education-title">Formazione</h2>
+      <ul class="entry-list">
+        <li class="entry">
+          <div class="entry-head">
+            <h3>Full Stack Developer &amp; Integrator</h3>
+            <span class="entry-period">2024 — 2026</span>
+          </div>
+          <p class="entry-org">ITS Prodigi</p>
+          <p>
+            Percorso ITS (Istituto Tecnico Superiore) orientato allo sviluppo web full stack
+            e all'integrazione di sistemi.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="about" class="container section" aria-labelledby="about-title">
       <p class="prompt">cat chi_sono.md</p>
-      <h2 class="section-title">Chi sono</h2>
+      <h2 class="section-title" id="about-title">Chi sono</h2>
       <p>
         Ciao, sono Lorenzo. Mi sono formato come Full Stack Developer &amp; Integrator in
         un ITS, ma quello che mi ha fatto restare in questo mestiere è la curiosità: mi
         piace smontare gli strumenti nuovi e capire davvero come funzionano, che sia un
         modello AI o un protocollo di autenticazione. Questa stessa curiosità, unita alla
         passione per il calcio della mia zona, mi ha spinto a costruire da zero
-        <em>Calcio in Ciociaria</em>, una testata sportiva scritta interamente da agenti AI.
+        <a href="progetti/calcio-in-ciociaria/">Calcio in Ciociaria</a>, una testata
+        sportiva scritta interamente da agenti AI.
       </p>
       <p>
-        Nel lavoro di tutti i giorni provo a portare la stessa attenzione ai dettagli: dai
-        sistemi multi-agente ai pagamenti PagoPA, mi piace che le cose funzionino bene, non
-        solo che sembrino funzionare.
+        Nel lavoro di tutti i giorni provo a portare la stessa attenzione ai dettagli,
+        dalle integrazioni enterprise ai sistemi basati su AI: mi piace che le cose
+        funzionino bene, non solo che sembrino funzionare.
       </p>
     </section>
 
-    <section id="projects" class="container section">
-      <p class="prompt">ls progetti/</p>
-      <h2 class="section-title">Progetti in evidenza</h2>
-      <div class="cards">
-
-        <article class="card">
-          <div class="card-body">
-            <h3>Piattaforma Multi-Agente AI con Gateway MCP</h3>
-            <p class="card-context">Progetto aziendale</p>
-            <p>
-              Gateway MCP costruito da zero per creare agenti AI personalizzati: un
-              orchestratore smista i ticket a cascata tra agenti specializzati, e un agente
-              "creatore" ne genera di nuovi quando manca una competenza.
-            </p>
-            <ul class="tag-list">
-              <li>Java</li>
-              <li>Vaadin</li>
-              <li>Gradle</li>
-              <li>MCP</li>
-              <li>Multi-agent AI</li>
-            </ul>
-            <button type="button" class="btn-details" data-open-dialog="dialog-mcp">cat dettagli.md</button>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media">
-            <img src="assets/calcio-desktop.png" alt="Home page di Calcio in Ciociaria su desktop" class="media-desktop" loading="lazy">
-            <img src="assets/calcio-mobile.png" alt="Home page di Calcio in Ciociaria su mobile" class="media-mobile" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Calcio in Ciociaria</h3>
-            <p class="card-context">Progetto personale — <a href="https://calcioinciociaria.it" target="_blank" rel="noopener">calcioinciociaria.it</a></p>
-            <p>
-              Testata giornalistica locale scritta in autonomia da agenti AI: un
-              <em>Researcher</em> raccoglie le notizie e un <em>Writer</em> genera gli
-              articoli, con una pipeline dedicata al calciomercato.
-            </p>
-            <ul class="tag-list">
-              <li>Java 21</li>
-              <li>Spring Boot</li>
-              <li>React</li>
-              <li>PostgreSQL</li>
-              <li>Google Gemini API</li>
-            </ul>
-            <button type="button" class="btn-details" data-open-dialog="dialog-calcio">cat dettagli.md</button>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <dialog id="dialog-mcp" class="detail-dialog">
-      <div class="dialog-head">
-        <p class="card-context">Progetto aziendale</p>
-        <button type="button" class="dialog-close" data-close aria-label="Chiudi">[x]</button>
-      </div>
-      <h3>Piattaforma Multi-Agente AI con Gateway MCP</h3>
-      <p>
-        <strong>Problema:</strong> lo sviluppo di nuove funzionalità e contenuti (es. landing
-        page, task di codice ripetitivi) richiedeva il coordinamento manuale di più
-        sviluppatori tramite il gestionale ticket aziendale, senza un modo strutturato per
-        delegare questo lavoro ad agenti AI collegati agli strumenti reali del team.
-      </p>
-      <p>
-        <strong>Soluzione:</strong> ho costruito da zero un gateway MCP universale che
-        permette di creare agenti AI personalizzati assegnando loro istruzioni, competenze
-        e un qualsiasi modello tramite API. Il gateway espone tool MCP che integrano GitLab
-        aziendale, una sandbox per leggere e scrivere codice, e il gestionale ticket interno,
-        dove ogni agente riceve ed elabora ticket direttamente. Include un
-        <strong>agente orchestratore</strong> capace di assegnare ticket ad altri agenti
-        anche a cascata, costruendo un vero e proprio grafo di lavoro, e un
-        <strong>agente "creatore"</strong> che genera in autonomia nuovi agenti specializzati
-        quando manca una competenza.
-      </p>
-      <p>
-        <strong>Risultato:</strong> sviluppo drasticamente più veloce sui task che il sistema
-        copre — ad esempio landing page generate quasi autonomamente a partire da un singolo
-        ticket assegnato all'orchestratore, che smista prima la ricerca delle informazioni e
-        poi la scrittura del codice ad agenti diversi.
-      </p>
-    </dialog>
-
-    <dialog id="dialog-calcio" class="detail-dialog">
-      <div class="dialog-head">
-        <p class="card-context">Progetto personale — <a href="https://calcioinciociaria.it" target="_blank" rel="noopener">calcioinciociaria.it</a></p>
-        <button type="button" class="dialog-close" data-close aria-label="Chiudi">[x]</button>
-      </div>
-      <h3>Calcio in Ciociaria</h3>
-      <img src="assets/calcio-desktop.png" alt="Home page di Calcio in Ciociaria" class="dialog-image">
-      <p>
-        <strong>Problema:</strong> seguire con continuità le notizie calcistiche locali della
-        provincia di Frosinone richiede fonti sparse e nessuna testata dedicata le copre in
-        modo sistematico — un lavoro editoriale quotidiano che, fatto manualmente, non è
-        sostenibile per una singola persona.
-      </p>
-      <p>
-        <strong>Soluzione:</strong> ho progettato e sviluppato una testata giornalistica
-        guidata da agenti AI. Un agente <em>Researcher</em> raccoglie quotidianamente le
-        notizie dalle fonti disponibili e un agente <em>Writer</em> genera articoli
-        giornalistici completi tramite l'API di Google Gemini, con editing, immagini e
-        pubblicazione gestiti da un pannello di amministrazione dedicato. Include anche una
-        pipeline di calciomercato che rileva automaticamente nuovi articoli da siti esterni,
-        ne estrae i dati strutturati e li arricchisce con informazioni da Transfermarkt e
-        Wikipedia prima di generare la notizia.
-      </p>
-      <p>
-        <strong>Risultato:</strong> un flusso editoriale che gira in autonomia ogni giorno,
-        dalla raccolta delle fonti alla pubblicazione, mantenendo aggiornata una testata
-        locale che altrimenti richiederebbe una redazione dedicata.
-      </p>
-    </dialog>
-
-    <section id="experience" class="container section">
-      <p class="prompt">ls esperienza/</p>
-      <h2 class="section-title">Altre esperienze professionali</h2>
-      <ul class="experience-list">
-        <li>
-          <strong>Canvas visuale per automazioni</strong> — sviluppo frontend e backend di
-          un editor a canvas per costruire automazioni basate su eventi (trigger e azioni).
-        </li>
-        <li>
-          <strong>Autenticazione SPID/CIE e pagamenti PagoPA</strong> — integrazione per una
-          Pubblica Amministrazione, tramite protocollo SAML.
-        </li>
-        <li>
-          <strong>Integrazione API Rentri</strong> — collegamento del gestionale aziendale al
-          sistema nazionale di tracciabilità dei rifiuti.
-        </li>
-        <li>
-          <strong>PayPal SDK su e-commerce</strong> — implementazione dei pagamenti su diverse
-          piattaforme e-commerce.
-        </li>
-        <li>
-          <strong>Pagamenti con Carta del Docente</strong> — integrazione del sistema di
-          pagamento dedicato ai docenti.
-        </li>
-      </ul>
-    </section>
-
-    <section id="skills" class="container section">
-      <p class="prompt">cat skills.txt</p>
-      <h2 class="section-title">Skills</h2>
-      <ul class="tag-list tag-list-large">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>Vaadin</li>
-        <li>Gradle</li>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>React</li>
-        <li>HTML &amp; CSS</li>
-        <li>PostgreSQL</li>
-        <li>REST API</li>
-        <li>Git &amp; GitLab</li>
-        <li>MCP / Agenti AI</li>
-        <li>SAML / SPID / CIE</li>
-        <li>PagoPA / PayPal</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="container section">
+    <section id="contact" class="container section" aria-labelledby="contact-title">
       <p class="prompt">cat contatti.txt</p>
-      <h2 class="section-title">Contatti</h2>
+      <h2 class="section-title" id="contact-title">Contatti</h2>
       <p>Sono sempre disponibile per una chiacchierata su nuovi progetti o opportunità.</p>
       <ul class="contact-list">
         <li>
           <a href="mailto:lorenzopaniccia9@gmail.com">lorenzopaniccia9@gmail.com</a>
         </li>
         <li>
-          <a href="https://github.com/lorenzopaniccia" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/lorenzopaniccia" target="_blank" rel="noopener noreferrer">GitHub</a>
         </li>
+        <!-- TODO(LinkedIn): quando il profilo esiste, aggiungere:
+        <li><a href="https://www.linkedin.com/in/..." target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        e inserire l'URL anche in "sameAs" nel JSON-LD in <head>. -->
+        <!-- TODO(CV): decommentare quando il PDF è in assets/
         <li>
-          <span class="muted">LinkedIn — in arrivo</span>
+          <a href="assets/cv-lorenzo-paniccia.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
         </li>
+        -->
       </ul>
     </section>
   </main>

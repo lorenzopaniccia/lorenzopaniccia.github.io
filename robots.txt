@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lorenzopaniccia.github.io/sitemap.xml

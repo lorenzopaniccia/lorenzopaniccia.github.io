@@ -1,29 +1,44 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+// Comportamenti minimi condivisi da tutte le pagine: anno nel footer e menu mobile.
+// Ogni blocco controlla che gli elementi esistano, così lo script può essere
+// incluso anche nelle pagine dei case study senza modifiche.
+
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
-navToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-});
+if (navToggle && navLinks) {
+  const setOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Chiudi menu' : 'Apri menu');
+  };
 
-navLinks.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.addEventListener('click', () => {
+    setOpen(!navLinks.classList.contains('open'));
   });
-});
 
-document.querySelectorAll('[data-open-dialog]').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.getElementById(btn.dataset.openDialog).showModal();
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
   });
-});
 
-document.querySelectorAll('dialog').forEach((dialog) => {
-  dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', (e) => {
-    if (e.target === dialog) dialog.close();
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      setOpen(false);
+      navToggle.focus();
+    }
   });
-});
+
+  document.addEventListener('click', (e) => {
+    if (
+      navLinks.classList.contains('open') &&
+      !navLinks.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      setOpen(false);
+    }
+  });
+}
